@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap');
+
+:root {
+    --beige: #eaac8b;
+    --pinkish: #e56b6f;
+    --blush: #b56576;
+    --dark-purple: #6d597a;
+    --dark-blue: #355070;
+}
+
+body {
+    background-color: var(--beige);
+    margin-left: 1em;
+    min-width: 300px;
+}
+
+header {
+    font-family: 'Pacifico', cursive;
+    font-size: 30pt;
+    color: var(--pinkish);
+    text-shadow: 1.5px 1.5px var(--blush), 3px 3px var(--dark-purple);
+}
+
+main {
+    font-family: 'Open Sans', sans-serif;
+}
+
+button {
+    background-color: var(--pinkish);
+    color: var(--dark-blue);
+    margin-top: 1em; margin-left: 1em; margin-bottom: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    box-shadow: 4px 4px var(--blush);
+    border-radius: 3px;
+    border-width: 0px;
+    font-size: 10pt;
+}
+
+button:active {
+    transform: translate(1px, 1px);
+    box-shadow: 3px 3px var(--dark-blue);
+}
+
+.list-item {
+    display: flex;
+    border: 1.5px var(--dark-blue) solid;
+    margin-top: 4px;
+    padding: 2px;
+    font-size: 11pt;
+}
+
+del {
+    color: var(--dark-blue);
+}
+
+.txt-box {
+    width: 85%;
+    margin-left: 10px;
+    padding: 5px;
+    border: 1.5px var(--dark-blue) solid;
+}
