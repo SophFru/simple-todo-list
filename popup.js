@@ -5,7 +5,8 @@ var list = {length: 0, next: 1};
 //Adds a textbox for the user to type their to-do
 $('#new-item').click(function() {
     $('.list').append('<div class="new-item-txtbx" id="item-'+ list.next +'"><div>');
-    $('#item-' + list.next).html('<button class="confirm-new-item">✔️</button><input class="txt-box">')
+    $('#item-' + list.next).html('<button class="confirm-new-item">✔️</button><input class="txt-box">').hide();
+    $('#item-' + list.next).fadeIn(275, 'swing');
     list.length++; 
     list.next++;
 });
@@ -15,7 +16,9 @@ $('#remove-completed').click(function() {
     $('.list input').each(function() {
         if(this.checked) {
             parentDivID = $(this).parent().attr('id');
-            $('#' + parentDivID).remove();
+            $('#' + parentDivID).slideUp(300, 'swing', function(){
+                $('#' + parentDivID).remove();
+            });
             list.length--;
         }
     });
@@ -25,7 +28,10 @@ $('#remove-completed').click(function() {
 $('#clear-all').click(function() {
     list.length = 0;
     list.nextitem = 1;
-    $('.list').html('');
+    $('.list').fadeOut(300, 'swing', function(){
+        $('.list').html('');
+        $('.list').show();
+    });
 });
 
 //   List Buttons/Checkboxes   //
