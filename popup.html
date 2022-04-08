@@ -9,12 +9,16 @@
 <body>
     <header>Simple To-do List</header>
     <main>
-        <nav class="button-container">
-            <button id="new-item">New Item</button>
-            <button id="remove-completed">Remove Completed</button>
-            <button id="clear-all">Clear All</button>
-            <!--<button id="edit">Edit</button>-->
+        <nav>
+            <div class="button-container">
+                <button id="new-item">New Item</button>
+                <button id="remove-completed">Remove Completed</button>
+                <button id="clear-all">Clear All</button>
+                <button class="edit-mode" id="edit">Edit</button>
+            </div>
+            <button class="edit-mode" id="finish-edit">Done</button>
         </nav>
+        <button id="finish-edit">Done</button>
         <div class="list"></div>
     </main>
     <script src="popup.js"></script>

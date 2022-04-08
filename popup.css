@@ -42,16 +42,21 @@ button:active {
     box-shadow: 3px 3px var(--dark-blue);
 }
 
+#finish-edit {
+    display:none;
+}
+
 .list-item {
     display: flex;
     border: 1.5px var(--dark-blue) solid;
     margin-top: 4px;
     padding: 2px;
     font-size: 11pt;
+    color: rgb(50, 50, 50);
 }
 
 del {
-    color: var(--dark-blue);
+    color: var(--dark-purple);
 }
 
 .txt-box {
